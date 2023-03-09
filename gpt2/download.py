@@ -1,8 +1,8 @@
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import GPT2Tokenizer, GPT2LMHeadModel
 
-tokenizer = AutoTokenizer.from_pretrained('gpt2')
-model = AutoModelForCausalLM.from_pretrained('gpt2')
+tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+model = GPT2LMHeadModel.from_pretrained('gpt2')
 
 tokenizer.save_pretrained("./model")
 torch.save(model, "./model/gpt2.pt")

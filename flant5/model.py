@@ -1,7 +1,7 @@
 import torch
-from transformers import AutoTokenizer
+from transformers import T5Tokenizer
 
-tokenizer = AutoTokenizer.from_pretrained("./model")
+tokenizer = T5Tokenizer.from_pretrained("./model")
 model = torch.load("./model/flant5.pt")
 
 task = input("Task: ")

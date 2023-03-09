@@ -1,7 +1,7 @@
 import torch
-from transformers import AutoTokenizer
+from transformers import CodeGenTokenizer
 
-tokenizer = AutoTokenizer.from_pretrained("./model")
+tokenizer = CodeGenTokenizer.from_pretrained("./model")
 model = torch.load("./model/codegen.pt")
 
 sequence = input("Enter Prompt: ")

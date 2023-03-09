@@ -1,7 +1,7 @@
 import torch
-from transformers import AutoTokenizer
+from transformers import GPT2Tokenizer
 
-tokenizer = AutoTokenizer.from_pretrained("./model")
+tokenizer = GPT2Tokenizer.from_pretrained("./model")
 model = torch.load("./model/gpt2.pt")
 
 sequence = input("Enter Prompt: ")
